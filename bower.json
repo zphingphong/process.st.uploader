@@ -1,0 +1,24 @@
+{
+  "name": "uploader-project",
+  "version": "0.0.1",
+  "description": "uploader",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.3.7",
+    "jquery-file-upload": "https://github.com/blueimp/jQuery-File-Upload.git",
+    "angular": "~1.5.8",
+    "jquery": "~3.1.1",
+    "jquery-ui": "~1.12.1",
+    "blueimp-file-upload": "blueimp-file-upload-node#~9.12.5"
+  }
+}

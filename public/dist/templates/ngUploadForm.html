@@ -1,0 +1,29 @@
+<form id="fileupload" method="POST" file-upload="options" ng-class="{'fileupload-processing': processing() || loadingFiles}">
+    <!-- Redirect browsers with JavaScript disabled to the origin page -->
+    <noscript><input type="hidden" name="redirect" value="https://blueimp.github.io/jQuery-File-Upload/"></noscript>
+    <!-- The fileupload-buttonbar contains buttons to add/delete files and start/cancel the upload -->
+    <div class="row fileupload-buttonbar">
+        <div class="col-sm-12">
+            <!-- The fileinput-button span is used to style the file input field as button -->
+            <span class="btn btn-success fileinput-button" ng-class="{disabled: disabled}">
+                <i class="glyphicon glyphicon-plus"></i>
+                <span>Add files...</span>
+                <input type="file" name="files[]" multiple ng-disabled="disabled">
+            </span>
+
+            <!-- The global file processing state -->
+            <span class="fileupload-process"></span>
+        </div>
+        <!-- The global progress state -->
+        <div class="col-lg-5 fade" data-ng-class="{in: active()}">
+            <!-- The global progress bar -->
+            <div class="progress progress-striped active" data-file-upload-progress="progress()"><div class="progress-bar progress-bar-success" data-ng-style="{width: num + '%'}"></div></div>
+            <!-- The extended global progress state -->
+            <div class="progress-extended">&nbsp;</div>
+        </div>
+    </div>
+    
+    <!-- The table listing the files available for upload/download -->
+    <div ng-if="result" class="wistia_embed wistia_async_{{result.hashed_id}} playlistLinks=auto" style="height:360px;width:640px">&nbsp;</div>
+    
+</form>
